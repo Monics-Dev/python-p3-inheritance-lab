@@ -22,5 +22,5 @@ class TestTeacher:
 
     def test_can_teach(self):
         '''teaches from list of knowledge.'''
-        my_teacher = Teacher("My", "Teacher")
-        assert(my_teacher.teach() in my_teacher.knowledge)
+        my_teacher.teach(["Python", "Math", "History"])
+        assert(all(topic in my_teacher.knowledge for topic in ["Python", "Math", "History"]))
